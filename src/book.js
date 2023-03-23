@@ -11,16 +11,24 @@ function buildMainCharacter(name, age, pronouns) {
 };
 
 function saveReview(review, reviews) {
+  // check to see if new review is already in reviews array
+  for (var i = 0; i < reviews.length; i++) {
+    if (review === reviews[i]) {
+      return null;
+    }   
+  }
   reviews.push(review);
 };
 
-// console.log(saveReview("An astounding success", reviews));
+function calculatePageCount(title) {
+  // add 20 pages per letter in the title
+}
 
 module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
-  // calculatePageCount,
+  calculatePageCount,
   // writeBook,
   // editBook
 }
