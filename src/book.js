@@ -22,13 +22,20 @@ function saveReview(review, reviews) {
 
 function calculatePageCount(title) {
   // add 20 pages per letter in the title
-}
+  var counter = 0;
+  for (var i = 0; i < title.length; i++) {
+    counter = counter + 20;
+  }
+  return counter;
+};
+
+
 
 module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
   calculatePageCount,
-  // writeBook,
+  writeBook,
   // editBook
 }
