@@ -1,5 +1,14 @@
 // book.js
 
+module.exports = {
+  createTitle,
+  buildMainCharacter,
+  saveReview,
+  calculatePageCount,
+  writeBook,
+  editBook
+}
+
 function createTitle(title) {
   return `The ${title}`;
 };
@@ -46,11 +55,3 @@ function editBook(title) {
 };
 
 
-module.exports = {
-  createTitle,
-  buildMainCharacter,
-  saveReview,
-  calculatePageCount,
-  writeBook,
-  editBook
-}
