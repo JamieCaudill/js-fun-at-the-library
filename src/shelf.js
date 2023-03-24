@@ -15,9 +15,19 @@ function shelfBook(book, shelf) {
   return shelf.unshift(book);
 };
 
-function unshelfBook() {
+function unshelfBook(book, shelf) {
+  // should remove a book by name
+  // iterate through elements in the array
+  for (var i = 0; i < shelf.length; i++) {
+    // conditional to check for matching name
+    if (book === shelf[i].title) {
+      shelf.splice(i, 1);
+    }
+  }
+};
 
-}
+
+
 
 
 
