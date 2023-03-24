@@ -120,7 +120,7 @@ describe("library.js", function() {
       assert.equal(result2, "You have now checked out Born a Crime from the Denver Public Library.")
     });
 
-    it.skip("should only checkout a book if the book is on the shelves", function() {
+    it("should only checkout a book if the book is on the shelves", function() {
       var denverLibrary = createLibrary("Denver Public Library");
 
       var error1 = checkoutBook(denverLibrary, "The Fifth Season", "fantasy");
