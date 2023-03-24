@@ -20,8 +20,9 @@ function createLibrary(library) {
 };
 
 function addBook(library, book) {
-  // access correct shelf
-  library.shelves.fantasy.push(book); 
+  // access correct shelf and push book
+  // sort based on genre using bracket notation
+  library.shelves[book.genre].push(book); 
 };
 
 // var denverLibrary = createLibrary("Denver Public Library");

@@ -56,7 +56,7 @@ describe("library.js", function() {
       assert.equal(denverLibrary.shelves.fantasy[0], dracula);
     });
 
-    it.skip("should add books to the correct shelves automatically", function() {
+    it("should add books to the correct shelves automatically", function() {
       var denverLibrary = createLibrary("Denver Public Library");
       var dracula = {
         title: "Dracula",
