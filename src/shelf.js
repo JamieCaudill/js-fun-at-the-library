@@ -2,8 +2,8 @@
 module.exports = {
   shelfBook,
   unshelfBook,
-  // listTitles,
-  // searchShelf
+  listTitles,
+  searchShelf
 };
 
 function shelfBook(book, shelf) {
@@ -26,9 +26,23 @@ function unshelfBook(book, shelf) {
   }
 };
 
+function listTitles(shelf) {
+  // list titles on shelf in string
+  // array for titles
+  var bookTitles = []; 
+  // iterate through books on shelf
+  for (var i = 0; i < shelf.length; i++) {
+    bookTitles.push(shelf[i].title);
+  }
+  return bookTitles.join(', ');
+};
 
-
-
-
-
-
+function searchShelf(shelf, bookTitle) {
+  // iterate through elements in the shelf
+  for (var i = 0; i < shelf.length; i++) {
+    if (bookTitle === shelf[i].title) {
+      return true;
+    } 
+  }
+  return false;
+};
