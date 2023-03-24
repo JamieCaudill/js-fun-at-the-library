@@ -135,7 +135,7 @@ describe("library.js", function() {
 
   describe('takeStock', function() {
 
-    it.skip('should be able to take stock of how many books are on a shelf', function() {
+    it('should be able to take stock of how many books are on a shelf', function() {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
