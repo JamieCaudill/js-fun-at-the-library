@@ -43,6 +43,16 @@ function checkoutBook(library, book, genre) {
 function takeStock(library, genre) {
   // access shelf
   var shelf = library.shelves[genre]
+  var bookCounter = 0;
+  // if a shelf is not specified, return number of entire collection
+  if (genre === undefined) {
+    bookCounter = library.shelves.fantasy.length + library.shelves.fiction.length + library.shelves.nonFiction.length;
+    // iterate through all books on all shelves.
+    // for (var i = 0; i < library.shelves.fantasy; i++) {
+    //   library.shelves.fantasy[i]
+    return `There are a total of ${bookCounter} books at the ${library.name}.`
+    } 
+  // There are a total of 3 books at the Denver Public Library.
   return `There are a total of ${shelf.length} ${genre} books at the ${library.name}.`;
 }
 
@@ -74,4 +84,4 @@ addBook(auroraLibrary, hyperion);
 addBook(auroraLibrary, dune);
 addBook(auroraLibrary, prideAndPrejudice);
 
-// console.log(takeStock(auroraLibrary, 'fantasy'))
+// console.log(takeStock(auroraLibrary));
