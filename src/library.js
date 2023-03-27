@@ -22,7 +22,7 @@ function createLibrary(library) {
 function addBook(library, book) {
   // access correct shelf and push book
   // sort based on genre using bracket notation
-  library.shelves[book.genre].push(book); 
+  return library.shelves[book.genre].push(book); 
 };
 
 function checkoutBook(library, book, genre) {
